@@ -1,0 +1,26 @@
+server:
+  port: 9093
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 3000
+       
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: access_control
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: access_control
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
