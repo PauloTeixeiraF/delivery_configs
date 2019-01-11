@@ -4,6 +4,7 @@ server:
 eureka:   
   instance:
     hostname: localhost
+    port: 9091
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
     metadata-map:
@@ -12,7 +13,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
     
 management:
   endpoints:
