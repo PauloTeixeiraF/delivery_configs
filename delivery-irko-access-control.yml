@@ -22,6 +22,6 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: access_control
+    name: delivery-irko-access-control
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
