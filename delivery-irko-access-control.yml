@@ -20,7 +20,9 @@ spring:
       port: 27017
       database: access_control
       uri=mongodb://localhost/access_control
-
+  autoconfigure:
+    exclude:org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+    
   main:
     allow-bean-definition-overriding: true
   application:
