@@ -19,7 +19,7 @@ spring:
       host: localhost
       port: 27017
       database: access_control
-      uri=mongodb://localhost/access_control
+      uri: mongodb://localhost/access_control
  
   main:
     allow-bean-definition-overriding: true
